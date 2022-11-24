@@ -1,0 +1,161 @@
+.contact {
+  position: relative;
+  height: 100%;
+  font-family: poppins;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+
+    .left {
+      width: 35%;
+
+      .deks {
+        font-size: 1rem;
+        color: var(--bfont-color);
+      }
+
+      form {
+        .flex {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+        }
+        .double {
+          width: 49%;
+        }
+        .single {
+          width: 100%;
+        }
+        textarea {
+          width: 100%;
+        }
+        input,
+        textarea {
+          padding: 0.7vw;
+          border: none;
+          outline: none;
+          background: var(--bfont-color);
+          margin-bottom: 0.5rem;
+          color: #8d8d8d;
+
+          &:hover,
+          &:focus,
+          &:active,
+          &:valid,
+          &:active {
+            border: none;
+            background: var(--bfont-color);
+          }
+        }
+
+        .action {
+          display: flex;
+          justify-content: flex-end;
+
+          .btn-message {
+            background-color: var(--bfont-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            padding: 0.3rem;
+            fill: var(--wfont-color);
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    .right {
+      margin-left: 10vw;
+      border-left: 2px solid var(--bfont-color);
+      padding: 2rem;
+      opacity: 0.7;
+
+      ul {
+        li {
+          list-style: none;
+          margin-bottom: 1rem;
+          a {
+            text-decoration: none;
+            color: var(--bfont-color);
+            font-weight: 500;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+
+            span {
+              margin-left: 1rem;
+            }
+
+            &:hover {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .left {
+    width: 80% !important;
+
+    .btn-message {
+      width: 20% !important;
+    }
+  }
+  .container {
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  .right {
+    width: 30% !important;
+    margin-left: 0 !important;
+    border: none !important;
+    a {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact {
+    margin-top: 4rem;
+  }
+  .container {
+    display: block !important;
+  }
+  .left {
+    width: 100% !important;
+    input,
+    textarea {
+      padding: 0.7rem !important;
+    }
+  }
+  .right {
+    border: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+
+    .sosmed {
+      display: flex !important;
+      justify-content: space-around;
+      li {
+        a {
+          font-size: 1.5rem !important;
+          margin: 1rem;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
