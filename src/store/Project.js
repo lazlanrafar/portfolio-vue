@@ -21,6 +21,15 @@ const Project = {
         category: ["Vanilla"],
       },
       {
+        title: "Airplane - Airplane Ticket App",
+        created: "Nov 1, 2022",
+        image: "airplane.webp",
+        designer: "Buildwith Angga",
+        link: "https://github.com/lazlanrafar/airplane",
+        sourceCode: "https://github.com/lazlanrafar/airplane",
+        category: ["Flutter"],
+      },
+      {
         title: "Ocean Paradise - Backround Video Website",
         created: "Dec 23, 2021",
         image: "oceanparadise.webp",
