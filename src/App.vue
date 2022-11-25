@@ -17,11 +17,7 @@
     </div>
 
     <div class="trans-back" ref="transition">
-      <img
-        src="https://klee-chan.github.io/images/loading.gif"
-        alt="Image GIF"
-        width="100"
-      />
+      <img src="@/assets/images/loading.gif" alt="Image GIF" width="100" />
       <p>Let me think &#129300; ...</p>
     </div>
   </div>
