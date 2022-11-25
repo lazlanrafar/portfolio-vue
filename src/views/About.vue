@@ -36,7 +36,7 @@ import TagCloud from "TagCloud";
 export default {
   name: "About",
   components: {
-    HeaderText: () => import("@/components/HeaderText"),
+    HeaderText: () => import("@/components/atoms/text-header.vue"),
   },
   mounted() {
     const container = this.$refs.skill;

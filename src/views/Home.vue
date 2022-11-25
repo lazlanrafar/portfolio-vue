@@ -23,7 +23,7 @@ export default {
   name: "Home",
   mixins: [TransitionMixin],
   components: {
-    HeaderText: () => import("@/components/HeaderText.vue"),
+    HeaderText: () => import("@/components/atoms/text-header.vue"),
   },
 };
 </script>

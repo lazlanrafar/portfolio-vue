@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-    <div>
+    <!-- <div>
       <Welcome />
-    </div>
+    </div> -->
 
-    <Navbar />
+    <sidebar />
 
-    <div class="view">
-      <div class="symbols">
-        <div class="top">
-          <div class="code">html</div>
-          <div class="code" style="margin-left: 0.5rem">body</div>
-        </div>
-      </div>
+    <div class="content">
+      <symbols position="top" />
 
       <transition name="fade" mode="out-in" class="route">
         <keep-alive>
@@ -20,12 +15,7 @@
         </keep-alive>
       </transition>
 
-      <div class="symbols">
-        <div class="bottom">
-          <div class="code" style="margin-left: 0.5rem">/body</div>
-          <div class="code">/html</div>
-        </div>
-      </div>
+      <symbols position="bottom" />
     </div>
 
     <div class="trans-back" ref="transition">
@@ -43,8 +33,9 @@ export default {
   name: "App",
   mixins: [TransitionMixin],
   components: {
-    Navbar: () => import("@/components/Navbar.vue"),
-    Welcome: () => import("@/components/Welcome.vue"),
+    sidebar: () => import("@/components/app/sidebar/index.vue"),
+    symbols: () => import("@/components/app/symbols/index.vue"),
+    // Welcome: () => import("@/components/Welcome.vue"),
   },
   mounted() {
     this.$store.state.App.bgTranstition = this.$refs.transition;

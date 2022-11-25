@@ -55,7 +55,7 @@
 export default {
   name: "ProjectPage",
   components: {
-    HeaderText: () => import("@/components/HeaderText"),
+    HeaderText: () => import("@/components/atoms/text-header.vue"),
   },
   data() {
     return {

@@ -68,7 +68,7 @@
 export default {
   name: "Contact",
   components: {
-    HeaderText: () => import("@/components/HeaderText"),
+    HeaderText: () => import("@/components/atoms/text-header.vue"),
   },
   data() {
     return {

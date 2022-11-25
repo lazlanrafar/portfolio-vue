@@ -17,8 +17,21 @@
 
 <script>
 export default {
-  name: "HeaderText",
-  props: ["text", "close", "home"],
+  name: "text-header",
+  props: {
+    text: {
+      type: String,
+      required: true,
+    },
+    close: {
+      type: Boolean,
+      default: false,
+    },
+    home: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
 
@@ -48,36 +61,14 @@ h1 {
     display: inline-block;
     &:hover,
     &::after {
-      animation: spanhover linear 1s;
+      animation: rubberband linear 1s;
     }
   }
   .space {
     padding: 5px;
   }
 }
-@keyframes spanhover {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-}
+
 @media only screen and (max-width: 1024px) {
   .head-home {
     font-size: 10vw;

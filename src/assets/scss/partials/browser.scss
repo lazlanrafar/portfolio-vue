@@ -1,0 +1,36 @@
+// ============================================
+// Text block
+// ============================================
+
+::-moz-selection {
+  background: #999999;
+}
+
+::selection {
+  background: #999999;
+}
+
+// ============================================
+// Scrollbar
+// ============================================
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gray-color);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

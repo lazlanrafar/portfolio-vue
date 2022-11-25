@@ -33,7 +33,7 @@
 <script>
 import TransitionMixin from "@/mixins/transition";
 export default {
-  name: "Navbar",
+  name: "app-sidebar",
   mixins: [TransitionMixin],
   data() {
     return {

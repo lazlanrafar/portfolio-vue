@@ -1,3 +1,6 @@
+@import "./partials/animation.scss";
+@import "./partials/browser.scss";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,43 +16,15 @@
   --nav-md: 13vh;
 }
 
-::-moz-selection {
-  /* Code for Firefox */
-  background: #999999;
-}
-
-::selection {
-  background: #999999;
-}
-
 #app {
   background-color: var(--main-color);
 }
 
-.view {
-  width: 100%;
-  background-color: var(--main);
+.content {
   padding-left: calc(var(--nav-lg) + 4rem);
-  padding-right: 4rem;
+  width: 100%;
   height: 100vh;
   position: relative;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.symbols {
-  position: absolute;
-  left: calc(var(--nav-lg) + 2rem);
-
-  .top {
-    top: 1rem;
-    position: absolute;
-  }
-
-  .bottom {
-    bottom: 1rem;
-    position: absolute;
-  }
 }
 
 .code {
@@ -174,7 +149,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .view {
+  .content {
     padding: 0 4rem !important;
     height: calc(100vh - var(--nav-md));
   }
@@ -185,7 +160,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .view {
+  .content {
     padding: 0 2rem !important;
   }
 
@@ -196,25 +171,4 @@
   .symbols {
     left: 1rem !important;
   }
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--gray-color);
-  border-radius: 20px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
