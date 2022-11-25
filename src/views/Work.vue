@@ -5,16 +5,16 @@
       <textHeader text="My Work" close="true" />
     </div>
     <div class="work-list">
-      <div class="work" v-for="work in reports" :key="work.key">
+      <div class="work" v-for="(work, index) in reports" :key="index">
         <div class="information">
           <textCode text="h1" />
-          <h1 class="work-title">0{{ work.key }}.</h1>
+          <h1 class="work-title">0{{ index + 1 }}.</h1>
           <h1 class="work-title">
             {{ work.title }}
             <textCode text="h1" isClose />
           </h1>
           <img
-            :src="require(`@/assets/images/${work.img}`)"
+            :src="require(`@/assets/images/works/${work.img}`)"
             alt=""
             class="mobile-img"
           />
@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="img">
-          <img :src="require(`@/assets/images/${work.img}`)" alt="" />
+          <img :src="require(`@/assets/images/works/${work.img}`)" alt="" />
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@
               <img
                 class="hidden-img"
                 width="100%"
-                :src="require(`@/assets/images/project/${project.image}`)"
+                :src="require(`@/assets/images/projects/${project.image}`)"
                 alt=""
               />
             </div>
