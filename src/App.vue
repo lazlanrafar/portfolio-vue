@@ -39,38 +39,10 @@ export default {
   },
   mounted() {
     this.$store.state.App.bgTranstition = this.$refs.transition;
-
-    // console.log(this.$route.name);
-    // switch (this.$route.name) {
-    //   case "Home":
-    //     this.navTransition(0);
-    //     break;
-    //   case "About":
-    //     this.navTransition(1);
-    //     break;
-    //   case "Work":
-    //     this.navTransition(2);
-    //     break;
-    //   case "Project":
-    //     this.navTransition(3);
-    //     break;
-    //   case "Contact":
-    //     this.navTransition(4);
-    //     break;
-    //   default:
-    //     this.navTransition(0);
-    //     break;
-    // }
   },
 };
 </script>
 
 <style lang="scss">
 @import "@/assets/scss/app.scss";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
-@font-face {
-  font-family: "coolvetica";
-  src: url(./assets/fonts/coolvetica.ttf) format("truetype");
-}
 </style>
