@@ -1,65 +1,72 @@
 <template>
-  <div class="contact">
-    <div class="container">
-      <div class="left">
-        <div class="code">h1</div>
-        <header-text text="Contact Me" close="true" class="title"></header-text>
-        <div class="deks">
-          <div class="code" style="margin-top: -15px">p</div>
-          <p style="margin-bottom: 1rem">
-            I’m interested in freelance opportunities – especially ambitious or
-            large projects. However, if you have other request or question,
-            don’t hesitate to use the form.
-          </p>
-          <i class="code" style="top: -20px">/p</i>
-        </div>
-        <div class="code" style="margin-top: -20px">form</div>
-        <form action="mailto:lazlanrafar@gmail.com" autocomplete="off">
-          <div class="flex">
-            <input type="text" name="name" placeholder="Name" class="double" />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              class="double"
-            />
-          </div>
+  <div class="content-body" id="contact-page">
+    <div class="left">
+      <textCode text="h1" />
+      <textHeader text="Contact Me" close="true" class="title"></textHeader>
+      <div class="deks">
+        <textCode text="p" />
+        <p style="margin-bottom: 1rem">
+          I’m interested in freelance opportunities – especially ambitious or
+          large projects. However, if you have other request or question, don’t
+          hesitate to use the form.
+        </p>
+        <textCode text="p" />
+      </div>
+      <textCode text="form" />
+      <form action="mailto:lazlanrafar@gmail.com" autocomplete="off">
+        <div class="flex">
           <input
             type="text"
-            name="subject"
-            placeholder="Subject"
-            class="single flex"
+            name="name"
+            placeholder="Name"
+            class="double"
+            autocomplete="true"
           />
-          <textarea
-            name="field"
-            id="field"
-            cols="30"
-            rows="5"
-            placeholder="Message"
-            class="flex"
-          ></textarea>
-          <div class="action">
-            <a
-              type="submit"
-              onclick="location.href='mailto:lazlanrafar@gmail.com';"
-              class="btn-message"
-            >
-              <box-icon name="paper-plane"></box-icon>
-            </a>
-          </div>
-        </form>
-        <div class="code">/form</div>
-      </div>
-      <div class="right">
-        <ul class="sosmed">
-          <li v-for="(item, index) in socialMedia" :key="index">
-            <a :href="item.link" target="_blank">
-              <box-icon :name="item.icon" type="logo"></box-icon>
-              <span>{{ item.username }}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="double"
+            autocomplete="true"
+          />
+        </div>
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          class="single flex"
+          autocomplete="true"
+        />
+        <textarea
+          name="field"
+          id="field"
+          cols="30"
+          rows="5"
+          placeholder="Message"
+          class="flex"
+          autocomplete="true"
+        ></textarea>
+        <div class="action">
+          <a
+            type="submit"
+            onclick="location.href='mailto:lazlanrafar@gmail.com';"
+            class="btn-message"
+          >
+            <box-icon name="paper-plane"></box-icon>
+          </a>
+        </div>
+      </form>
+      <textCode text="form" isClose />
+    </div>
+    <div class="right">
+      <ul class="sosmed">
+        <li v-for="(item, index) in socialMedia" :key="index">
+          <a :href="item.link" target="_blank">
+            <box-icon :name="item.icon" type="logo"></box-icon>
+            <span>{{ item.username }}</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -68,7 +75,8 @@
 export default {
   name: "Contact",
   components: {
-    HeaderText: () => import("@/components/atoms/text-header.vue"),
+    textHeader: () => import("@/components/atoms/text-header.vue"),
+    textCode: () => import("@/components/atoms/text-code.vue"),
   },
   data() {
     return {
