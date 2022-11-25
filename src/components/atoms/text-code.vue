@@ -1,10 +1,5 @@
 <template>
-  <div class="symbols">
-    <div class="bottom">
-      <div class="code" style="margin-left: 0.5rem">/body</div>
-      <div class="code">/html</div>
-    </div>
-  </div>
+  <div class="code"><span v-if="isClose">/</span>{{ text }}</div>
 </template>
 
 <script>
@@ -15,26 +10,15 @@ export default {
       type: String,
       required: true,
     },
+    isClose: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.symbols {
-  position: absolute;
-  left: calc(var(--nav-lg) + 2rem);
-
-  .top {
-    top: 1rem;
-    position: absolute;
-  }
-
-  .bottom {
-    bottom: 1rem;
-    position: absolute;
-  }
-}
-
 .code {
   font-size: 1rem;
   font-family: "La Belle Aurore", cursive;

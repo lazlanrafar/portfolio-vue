@@ -15,7 +15,7 @@
         </span>
       </span>
     </h1>
-    <div class="code" style="margin-left: 1rem" v-if="close">/h1</div>
+    <textCode text="h1" isClose style="margin-left: 1rem" v-if="close" />
   </div>
 </template>
 
@@ -23,7 +23,9 @@
 export default {
   name: "text-header",
   props: ["text", "home", "close"],
-
+  components: {
+    textCode: () => import("@/components/atoms/text-code.vue"),
+  },
   methods: {
     addBouncing(val) {
       val.target.classList.add("bouncing");

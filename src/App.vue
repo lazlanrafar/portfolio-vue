@@ -9,7 +9,7 @@
 
       <transition name="fade" mode="out-in" class="route">
         <keep-alive>
-          <router-view class="content-body" />
+          <router-view />
         </keep-alive>
       </transition>
 

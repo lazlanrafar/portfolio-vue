@@ -17,7 +17,7 @@
   --nav-md: 13vh;
 }
 
-body {
+#app {
   background-color: var(--main-color);
 }
 
@@ -28,22 +28,9 @@ body {
   position: relative;
   background-color: var(--main-color);
   padding: 0 0 0 calc(var(--nav-lg) + 4rem);
-}
 
-.code {
-  font-size: 1rem;
-  font-family: "La Belle Aurore", cursive;
-  position: relative;
-  user-select: none;
-  color: var(--muted-color);
-  margin-left: -1em;
-
-  &::before {
-    content: "<";
-  }
-
-  &::after {
-    content: ">";
+  .content-body {
+    height: 100%;
   }
 }
 
@@ -124,11 +111,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .content {
-    padding: 0 0 var(--nav-md) 0 !important;
-
-    .content-body {
-      padding: 0 2rem calc(1rem + var(--nav-md)) 2rem !important;
-    }
+    padding: 0 1rem 0 2.5rem !important;
   }
 
   .code {

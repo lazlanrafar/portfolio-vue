@@ -1,13 +1,13 @@
 <template>
-  <div id="home">
-    <div class="container">
-      <div class="code">h1</div>
-      <HeaderText text="Hi," home="true" />
-      <HeaderText text="I'm Latoe," home="true" />
-      <HeaderText text="Web Developer" close="true" home="true" />
-      <div class="code">p</div>
+  <div class="content-body" id="home">
+    <div>
+      <textCode text="h1" />
+      <textHeader text="Hi," home="true" />
+      <textHeader text="I'm Latoe," home="true" />
+      <textHeader text="Web Developer" close="true" home="true" />
+      <textCode text="p" />
       <p class="desc">Front-End & Back-End Developer</p>
-      <div class="code">/p</div>
+      <textCode text="p" isClose />
       <br /><br />
       <div @click="navTransition(1)">
         <router-link to="/about" class="btn">About me!</router-link>
@@ -23,7 +23,8 @@ export default {
   name: "Home",
   mixins: [TransitionMixin],
   components: {
-    HeaderText: () => import("@/components/atoms/text-header.vue"),
+    textHeader: () => import("@/components/atoms/text-header.vue"),
+    textCode: () => import("@/components/atoms/text-code.vue"),
   },
 };
 </script>
