@@ -43,7 +43,6 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
 }
 .head-home {
@@ -84,7 +83,7 @@ h1 {
 @media only screen and (max-width: 600px) {
   .head-home,
   .head-common {
-    font-size: 12vw;
+    font-size: 11vw;
     letter-spacing: 1px;
     line-height: normal;
   }
