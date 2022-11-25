@@ -70,6 +70,15 @@ export default {
       ],
     };
   },
+  methods: {
+    setActive() {
+      for (const i in this.navList) {
+        if (this.navList[i].name === this.$route.name) {
+          this.navTransition(i);
+        }
+      }
+    },
+  },
   mounted() {
     this.$refs.navList.children[1].classList.add("active");
 
@@ -77,6 +86,8 @@ export default {
     this.$store.state.App.navHeight = this.$refs.menuBag.clientHeight;
     this.$store.state.App.navList = this.$refs.navList;
     this.$store.state.App.navLastActive = this.$refs.navList.children[1];
+
+    this.navTransition(+this.$route.name);
   },
 };
 </script>
