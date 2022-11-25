@@ -4,17 +4,6 @@
       <header-text text="My Project"></header-text>
     </div>
 
-    <ul class="cetegory">
-      <li
-        v-for="(item, index) in category"
-        :key="index"
-        @click="setCategory(item)"
-        v-bind:class="{ active: item == isActive }"
-      >
-        {{ item }}
-      </li>
-    </ul>
-
     <div class="project-list">
       <ul>
         <!-- ITEM 01 -->
@@ -58,12 +47,7 @@ export default {
     HeaderText: () => import("@/components/atoms/text-header.vue"),
   },
   data() {
-    return {
-      active: "",
-      isActive: "All",
-      category: ["All"],
-      projects: "",
-    };
+    return {};
   },
   computed: {
     reports() {
@@ -74,22 +58,6 @@ export default {
     // },
   },
   methods: {
-    setCategory(item) {
-      this.isActive = item;
-      let x = [];
-      if (item == "All") {
-        this.projects = this.reports;
-      } else {
-        for (const data of this.reports) {
-          for (let i = 0; i < data.category.length; i++) {
-            if (data.category[i] == item) {
-              x.push(data);
-            }
-          }
-        }
-        this.projects = x;
-      }
-    },
     mouseMove(event, index) {
       let linkHoverReveal = document.querySelectorAll(".hover-reveal");
       let linkImages = document.querySelectorAll(".hidden-img");
