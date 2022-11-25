@@ -26,6 +26,7 @@ export default {
   user-select: none;
   color: var(--muted-color);
   margin-left: -1em;
+  font-weight: 400 !important;
 
   &::before {
     content: "<";

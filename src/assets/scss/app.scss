@@ -30,6 +30,7 @@
   padding: 0 0 0 calc(var(--nav-lg) + 4rem);
 
   .content-body {
+    padding: 5rem 0;
     height: 100%;
   }
 }
@@ -111,7 +112,11 @@
 
 @media only screen and (max-width: 600px) {
   .content {
-    padding: 0 1rem 0 2.5rem !important;
+    padding: 0 1.5rem !important;
+
+    .content-body {
+      padding: 0.5rem 0;
+    }
   }
 
   .code {
