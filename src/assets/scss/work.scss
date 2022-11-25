@@ -1,11 +1,10 @@
-.work-page {
-  min-height: 100vh;
-  position: relative;
+#work-page {
+  margin-top: 5rem;
 
   .title {
     display: flex;
     justify-content: center;
-    margin: 3rem 0;
+    gap: 1rem;
   }
 
   .work-list {
@@ -25,6 +24,8 @@
 
         .work-title {
           font-size: 2vw;
+          display: flex;
+          align-items: flex-end;
         }
 
         .mobile-img {
@@ -92,8 +93,8 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .work-page {
-    padding-bottom: var(--size-navbar-mobile);
+  #work-page {
+    margin-top: 6em;
 
     .title {
       margin-bottom: 0 !important;
@@ -133,7 +134,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .work-page {
+  #work-page {
     .work-list {
       margin-top: 0 !important;
 
@@ -141,7 +142,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 3rem 0;
+        padding: 1rem 0 2rem 0;
 
         .information {
           width: 100%;

@@ -153,7 +153,7 @@ a:hover:after {
 
     .active {
       a {
-        color: var(--wfont-color);
+        color: var(--wfont-color) !important;
       }
 
       .icon {

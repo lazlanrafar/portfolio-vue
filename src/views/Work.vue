@@ -1,22 +1,24 @@
 <template>
-  <div class="work-page">
+  <div id="work-page">
     <div class="title">
-      <header-text text="My Work"></header-text>
+      <textCode text="h1" />
+      <textHeader text="My Work" close="true" />
     </div>
-
     <div class="work-list">
       <div class="work" v-for="work in reports" :key="work.key">
         <div class="information">
-          <span class="code">h1</span>
+          <textCode text="h1" />
           <h1 class="work-title">0{{ work.key }}.</h1>
           <h1 class="work-title">
             {{ work.title }}
-            <span class="code" style="margin-left: 0.5rem; font-weight: normal"
-              >/h1</span
-            >
+            <textCode text="h1" isClose />
           </h1>
-          <img :src="work.img" alt="" class="mobile-img" />
-          <span class="code">p</span>
+          <img
+            :src="require(`@/assets/images/${work.img}`)"
+            alt=""
+            class="mobile-img"
+          />
+          <textCode text="p" />
           <p class="description">
             {{ work.description }}
           </p>
@@ -29,7 +31,7 @@
               Design : <span>{{ work.design }}</span>
             </p>
           </div>
-          <span class="code">/p</span>
+          <textCode text="p" isClose />
           <div class="links">
             <a
               target="_blank"
@@ -41,7 +43,7 @@
           </div>
         </div>
         <div class="img">
-          <img :src="require(`@/assets/img/${work.img}`)" alt="" />
+          <img :src="require(`@/assets/images/${work.img}`)" alt="" />
         </div>
       </div>
     </div>
@@ -52,7 +54,8 @@
 export default {
   name: "WorkPage",
   components: {
-    HeaderText: () => import("@/components/HeaderText"),
+    textHeader: () => import("@/components/atoms/text-header.vue"),
+    textCode: () => import("@/components/atoms/text-code.vue"),
   },
   data() {
     return {};

@@ -5,7 +5,7 @@ const Project = {
       {
         title: "Ocean Paradise - Backround Video Website",
         created: "Dec 23, 2021",
-        image: "https://i.ibb.co/z7KNjYm/oceanparadise-vercel-app.png",
+        image: "oceanparadise.webp",
         designer: "Online Tutorial",
         link: "https://oceanparadise.vercel.app/",
         sourceCode: "https://github.com/lazlanrafar/ocean-paradise",
@@ -14,7 +14,7 @@ const Project = {
       {
         title: "Moonlight - Parralax Website",
         created: "Dec 24, 2021",
-        image: "https://i.ibb.co/R3LkVyz/moonllight-vercel-app.png",
+        image: "moonlight.webp",
         designer: "Online Tutorial",
         link: "https://moonllight.vercel.app/",
         sourceCode: "https://github.com/lazlanrafar/moonllight",
@@ -24,7 +24,7 @@ const Project = {
         id: 3,
         title: "Foodyar - Cooking Course Website",
         created: "Jan 25, 2022",
-        image: "https://i.ibb.co/MhvB9mm/Capture.png",
+        image: "foodyar.webp",
         designer: "Buildwithangga",
         link: "https://foodyar-eight.vercel.app/",
         sourceCode: "https://github.com/lazlanrafar/foodyar",
