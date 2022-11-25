@@ -1,24 +1,26 @@
-# portofolio
+# Latoe's Homepage
 
-## Project setup
-```
-npm install
-```
+[https://lazlanrafar.vercel.app/](https://lazlanrafar.vercel.app/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Stack
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- [Vue.js](https://vuejs.org/) - A JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Project Strcuture
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+$PROJECT_ROOT
+├── assets
+│   #
+├── components
+│   #
+├── mixins
+│   #
+├── router
+│   #
+├── store
+│   #
+├── views
+│   #
+
+```
