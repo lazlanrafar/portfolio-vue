@@ -22,7 +22,14 @@
               <p class="no">0{{ index + 1 }}/</p>
               <div class="text">
                 <p class="title">{{ project.title }}</p>
-                <p class="design">Design by : {{ project.designer }}</p>
+                <!-- <p class="design">Design by : {{ project.designer }}</p> -->
+                <p
+                  style="display: inline-block"
+                  v-for="(item, index) in project.category"
+                  :key="index"
+                >
+                  {{ item }}, &nbsp;
+                </p>
               </div>
             </div>
             <div class="hover-reveal">

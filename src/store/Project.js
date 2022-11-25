@@ -9,7 +9,16 @@ const Project = {
         designer: "Buildwithangga",
         link: "https://foodyar-eight.vercel.app/",
         sourceCode: "https://github.com/lazlanrafar/foodyar",
-        category: ["Vanilla", "Bootstrap"],
+        category: ["HTML", "Bootstrap"],
+      },
+      {
+        title: "StoreGG - Top Up Game Website",
+        created: "Nov 1, 2022",
+        image: "storegg.webp",
+        designer: "Buildwith Angga",
+        link: "https://storegg-sand.vercel.app/",
+        sourceCode: "https://github.com/lazlanrafar/storegg-fe",
+        category: ["Next.js", "Bootstrap"],
       },
       {
         title: "Resto - Restaurant App",
@@ -18,7 +27,7 @@ const Project = {
         designer: "Buildwith Angga",
         link: "https://resto-restaurant.vercel.app/",
         sourceCode: "https://github.com/lazlanrafar/resto-restaurant",
-        category: ["Vanilla"],
+        category: ["HTML", "CSS", "JavaScript"],
       },
       {
         title: "Airplane - Airplane Ticket App",
