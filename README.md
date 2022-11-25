@@ -11,9 +11,15 @@
 ```
 $PROJECT_ROOT
 ├── assets
-│   #
+│   ├─── fonts
+│   ├─── images
+│   ├─── scss
+│
 ├── components
-│   #
+│   ├─── atoms
+│   ├─── molecules
+│   ├─── organims
+│
 ├── mixins
 │   #
 ├── router
