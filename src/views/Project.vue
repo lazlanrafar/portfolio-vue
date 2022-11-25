@@ -40,7 +40,7 @@
               <img
                 class="hidden-img"
                 width="100%"
-                :src="project.image"
+                :src="require(`@/assets/images/project/${project.image}`)"
                 alt=""
               />
             </div>
