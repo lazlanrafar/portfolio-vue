@@ -1,8 +1,8 @@
 <template>
   <div class="symbols">
     <div class="top" v-if="position == 'top'">
-      <div class="code" style="margin-left: 0.5rem">body</div>
       <div class="code">html</div>
+      <div class="code" style="margin-left: 0.5rem">body</div>
     </div>
     <div class="bottom" v-if="position == 'bottom'">
       <div class="code" style="margin-left: 0.5rem">/body</div>

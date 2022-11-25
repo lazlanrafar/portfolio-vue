@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <div>
+    <div class="container">
       <div class="code">h1</div>
       <HeaderText text="Hi," home="true" />
       <HeaderText text="I'm Latoe," home="true" />

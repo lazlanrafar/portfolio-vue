@@ -1,33 +1,31 @@
 <template>
-  <div class="navbar">
-    <nav>
-      <div class="logo">
-        <h1>La.</h1>
+  <nav class="sidebar">
+    <div class="logo">
+      <h1>La.</h1>
+    </div>
+    <div class="direct" ref="navList">
+      <div class="active-back" ref="menuBag">
+        <span class="top-white"></span>
+        <span class="top-black"></span>
+        <span class="bot-white"></span>
+        <span class="bot-black"></span>
       </div>
-      <div class="direct" ref="navList">
-        <div class="active-back" ref="menuBag">
-          <span class="top-white"></span>
-          <span class="top-black"></span>
-          <span class="bot-white"></span>
-          <span class="bot-black"></span>
-        </div>
-        <div
-          v-for="(navItem, index) in navList"
-          :key="index"
-          class="list"
-          @click="navTransition(index)"
-        >
-          <router-link :to="navItem.link" :data-content="navItem.content">
-            <box-icon
-              :name="navItem.icon"
-              style="fill: currentColor"
-              class="icon"
-            ></box-icon>
-          </router-link>
-        </div>
+      <div
+        v-for="(navItem, index) in navList"
+        :key="index"
+        class="list"
+        @click="navTransition(index)"
+      >
+        <router-link :to="navItem.link" :data-content="navItem.content">
+          <box-icon
+            :name="navItem.icon"
+            style="fill: currentColor"
+            class="icon"
+          ></box-icon>
+        </router-link>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -84,5 +82,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/navbar.scss";
+@import "@/assets/scss/sidebar.scss";
 </style>

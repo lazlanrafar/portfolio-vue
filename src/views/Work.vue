@@ -15,7 +15,11 @@
               >/h1</span
             >
           </h1>
-          <img :src="work.img" alt="" class="mobile-img" />
+          <img
+            :src="require(`@/assets/images/${work.img}`)"
+            alt=""
+            class="mobile-img"
+          />
           <span class="code">p</span>
           <p class="description">
             {{ work.description }}
@@ -41,7 +45,7 @@
           </div>
         </div>
         <div class="img">
-          <img :src="require(`@/assets/img/${work.img}`)" alt="" />
+          <img :src="require(`@/assets/images/${work.img}`)" alt="" />
         </div>
       </div>
     </div>

@@ -6,7 +6,11 @@
         :key="index"
         :class="{ space: letter.indexOf(' ') >= 0 }"
       >
-        <span class="letter">
+        <span
+          class="letter"
+          @mouseover="addBouncing"
+          @mouseleave="removeBouncing"
+        >
           {{ letter }}
         </span>
       </span>
@@ -18,18 +22,17 @@
 <script>
 export default {
   name: "text-header",
-  props: {
-    text: {
-      type: String,
-      required: true,
+  props: ["text", "home", "close"],
+
+  methods: {
+    addBouncing(val) {
+      val.target.classList.add("bouncing");
     },
-    close: {
-      type: Boolean,
-      default: false,
-    },
-    home: {
-      type: Boolean,
-      default: false,
+    removeBouncing(val) {
+      // set timeout to prevent bouncing when mouse leave
+      setTimeout(() => {
+        val.target.classList.remove("bouncing");
+      }, 1000);
     },
   },
 };
@@ -57,16 +60,15 @@ h1 {
   -webkit-user-select: none;
   cursor: text;
   .letter {
-    transition: all 0.4s ease;
     display: inline-block;
-    &:hover,
-    &::after {
-      animation: rubberband linear 1s;
-    }
   }
   .space {
     padding: 5px;
   }
+}
+
+.bouncing {
+  animation: rubberband 800ms alternate ease-out;
 }
 
 @media only screen and (max-width: 1024px) {
