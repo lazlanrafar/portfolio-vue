@@ -2,7 +2,7 @@
 
 [https://lazlanrafar.vercel.app/](https://lazlanrafar.vercel.app/)
 
-<img src='./screenshot/screencapture.png' />
+<!-- <img src='./screenshot/screencapture.png' /> -->
 
 ## Referensi
 
