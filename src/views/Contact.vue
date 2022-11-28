@@ -23,6 +23,7 @@
             class="double"
             v-model="email.name"
             required
+            autocomplete="off"
           />
           <input
             type="email"
@@ -31,6 +32,7 @@
             class="double"
             v-model="email.email"
             required
+            autocomplete="off"
           />
         </div>
         <input
@@ -40,6 +42,7 @@
           class="single flex"
           v-model="email.subject"
           required
+          autocomplete="off"
         />
         <textarea
           name="field"
@@ -50,8 +53,16 @@
           class="flex"
           v-model="email.message"
           required
+          autocomplete="off"
         ></textarea>
         <div class="action">
+          <ul class="sosmed">
+            <li v-for="(item, index) in socialMedia" :key="index">
+              <a :href="item.link" target="_blank">
+                <box-icon :name="item.icon" type="logo" class="icon"></box-icon>
+              </a>
+            </li>
+          </ul>
           <button type="submit" class="btn-message">
             <box-icon name="paper-plane"></box-icon>
           </button>
@@ -59,15 +70,14 @@
       </form>
       <textCode text="form" isClose />
     </div>
-    <div class="right">
-      <ul class="sosmed">
-        <li v-for="(item, index) in socialMedia" :key="index">
-          <a :href="item.link" target="_blank">
-            <box-icon :name="item.icon" type="logo"></box-icon>
-            <span>{{ item.username }}</span>
-          </a>
-        </li>
-      </ul>
+    <div class="maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253421.23467417312!2d109.00882292810135!3d-7.043702235702081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fc7eb6d12ff35%3A0x5027a76e35665a0!2sKertayasa%2C%20Kec.%20Kramat%2C%20Kabupaten%20Tegal%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1669638706021!5m2!1sid!2sid"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        lang="en"
+      ></iframe>
     </div>
 
     <div class="loader" v-if="isShowingStatus">
@@ -95,22 +105,18 @@ export default {
       socialMedia: [
         {
           icon: "gmail",
-          username: "lazlanrafar@gmail.com",
           link: "mailto:lazlanrafar@gmail.com",
         },
         {
           icon: "instagram-alt",
-          username: "lazlanrafar",
           link: "https://www.instagram.com/lazlanrafar/",
         },
         {
           icon: "github",
-          username: "lazlanrafar",
           link: "https://github.com/lazlanrafar",
         },
         {
           icon: "twitter",
-          username: "lazlanrafar",
           link: "https://twitter.com/lazlanrafar",
         },
       ],
