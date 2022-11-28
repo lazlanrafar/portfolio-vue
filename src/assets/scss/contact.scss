@@ -57,7 +57,7 @@
           justify-content: center;
           align-items: center;
           width: 15%;
-          padding: 0.3rem;
+          padding: 0.3rem 0.5rem;
           fill: var(--wfont-color);
           border-radius: 5px;
         }
@@ -154,6 +154,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .message-status b {
@@ -209,6 +210,10 @@
       input,
       textarea {
         padding: 0.7rem !important;
+      }
+
+      .btn-message {
+        width: 30% !important;
       }
     }
     .right {
