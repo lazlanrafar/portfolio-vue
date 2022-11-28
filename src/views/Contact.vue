@@ -13,21 +13,24 @@
         <textCode text="p" />
       </div>
       <textCode text="form" />
-      <form action="mailto:lazlanrafar@gmail.com" autocomplete="off">
+      <form @submit.prevent="handleSubmit">
+        <input type="hidden" name="_captcha" value="false" />
         <div class="flex">
           <input
             type="text"
             name="name"
             placeholder="Name"
             class="double"
-            autocomplete="true"
+            v-model="email.name"
+            required
           />
           <input
             type="email"
             name="email"
             placeholder="Email"
             class="double"
-            autocomplete="true"
+            v-model="email.email"
+            required
           />
         </div>
         <input
@@ -35,7 +38,8 @@
           name="subject"
           placeholder="Subject"
           class="single flex"
-          autocomplete="true"
+          v-model="email.subject"
+          required
         />
         <textarea
           name="field"
@@ -44,16 +48,13 @@
           rows="5"
           placeholder="Message"
           class="flex"
-          autocomplete="true"
+          v-model="email.message"
+          required
         ></textarea>
         <div class="action">
-          <a
-            type="submit"
-            onclick="location.href='mailto:lazlanrafar@gmail.com';"
-            class="btn-message"
-          >
+          <button type="submit" class="btn-message">
             <box-icon name="paper-plane"></box-icon>
-          </a>
+          </button>
         </div>
       </form>
       <textCode text="form" isClose />
@@ -68,10 +69,21 @@
         </li>
       </ul>
     </div>
+
+    <div class="loader" v-if="isShowingStatus">
+      <div class="lds-ring" v-if="isLoading"></div>
+      <div v-else class="message-status">
+        <b>{{ sendMessageStatus }}</b>
+        <p>{{ statusMessage }}</p>
+        <button @click="toggleStatusPage">OK</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Contact",
   components: {
@@ -102,7 +114,58 @@ export default {
           link: "https://twitter.com/lazlanrafar",
         },
       ],
+      email: {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      },
+      statusMessage:
+        "Your Message has been sent successfully, I will contact you very soon !",
+      sendMessageStatus: "Thank you !",
+      isLoading: false,
+      isShowingStatus: false,
     };
+  },
+  methods: {
+    handleSubmit(e) {
+      e.preventDefault();
+      this.isLoading = true;
+      this.toggleStatusPage();
+      axios.defaults.headers.post["Content-Type"] = "application/json";
+      axios
+        .post("https://formsubmit.co/ajax/lazlanrafar@gmail.com", {
+          name: this.email.name,
+          email: this.email.email,
+          subject: this.email.subject,
+          message: this.email.message,
+        })
+        .then(() => {
+          // console.log(res);
+          this.email = {
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          };
+          this.isLoading = false;
+          this.isShowingStatus = true;
+          this.statusMessage =
+            "Your Message has been sent successfully, I will contact you very soon !";
+          this.sendMessageStatus = "Thank you !";
+        })
+        .catch((err) => {
+          console.log(err);
+          this.isShowingStatus = true;
+          this.isLoading = false;
+          this.statusMessage =
+            "Some error has occured, Please try again next time !";
+          this.sendMessageStatus = "Sorry !";
+        });
+    },
+    toggleStatusPage() {
+      this.isShowingStatus = !this.isShowingStatus;
+    },
   },
 };
 </script>
