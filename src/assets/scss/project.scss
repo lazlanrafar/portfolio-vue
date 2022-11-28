@@ -1,30 +1,11 @@
 .project-page {
   font-family: poppins;
+
   .title-page {
     display: flex;
     justify-content: center;
+    gap: 1rem;
     margin: 3rem 0;
-  }
-
-  .cetegory {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    li {
-      color: var(--bfont-color);
-      list-style: none;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: 300;
-      cursor: pointer;
-    }
-    .active {
-      background: var(--bfont-color);
-      color: #fff;
-      font-weight: 500;
-    }
   }
 
   .project-list {
@@ -79,6 +60,12 @@
               .title {
                 font-size: 1.7rem;
                 font-weight: 500;
+              }
+
+              .category {
+                font-size: 1.1rem;
+                font-weight: 400;
+                margin-top: 0.5rem;
               }
             }
           }
@@ -144,7 +131,7 @@
     margin-bottom: 1rem !important;
   }
   .project-item {
-    height: 30vw !important;
+    height: 35vw !important;
 
     .content {
       padding: 0 !important;
@@ -155,8 +142,8 @@
         .title {
           font-size: 0.8rem !important;
         }
-        .design {
-          font-size: 0.5rem !important;
+        .category {
+          font-size: 0.7rem !important;
         }
       }
     }

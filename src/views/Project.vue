@@ -1,7 +1,8 @@
 <template>
   <div class="project-page">
     <div class="title-page">
-      <header-text text="My Project"></header-text>
+      <textCode text="h1" />
+      <header-text text="My Project" close="true"></header-text>
     </div>
 
     <div class="project-list">
@@ -25,6 +26,7 @@
                 <!-- <p class="design">Design by : {{ project.designer }}</p> -->
                 <p
                   style="display: inline-block"
+                  class="category"
                   v-for="(item, index) in project.category"
                   :key="index"
                 >
@@ -52,6 +54,7 @@ export default {
   name: "ProjectPage",
   components: {
     HeaderText: () => import("@/components/atoms/text-header.vue"),
+    TextCode: () => import("@/components/atoms/text-code.vue"),
   },
   data() {
     return {};
