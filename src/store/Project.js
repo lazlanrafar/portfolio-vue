@@ -3,6 +3,15 @@ const Project = {
     loadingProject: false,
     reports: [
       {
+        title: "Hoobank - Master modern web development",
+        created: "Sep 30, 2022",
+        image: "hoobank.webp",
+        designer: "Javascript Mastery",
+        link: "https://hoobank-web.vercel.app/",
+        sourceCode: "https://github.com/lazlanrafar/hoobank-web",
+        category: ["Vite", "React.js", "Tailwind CSS"],
+      },
+      {
         title: "Foodyar - Cooking Course Website",
         created: "Jan 25, 2022",
         image: "foodyar.webp",

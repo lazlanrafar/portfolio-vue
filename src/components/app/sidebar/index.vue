@@ -52,13 +52,13 @@ export default {
         {
           name: "Work",
           link: "/work",
-          content: "My Work",
+          content: "Work",
           icon: "bowl-rice",
         },
         {
           name: "Project",
           link: "/project",
-          content: "My Project",
+          content: "Project",
           icon: "coffee",
         },
         {
