@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Welcome />
+    <welcome />
 
     <sidebar />
 
@@ -31,7 +31,7 @@ export default {
   components: {
     sidebar: () => import("@/components/app/sidebar/index.vue"),
     symbols: () => import("@/components/app/symbols/index.vue"),
-    Welcome: () => import("@/components/Welcome.vue"),
+    welcome: () => import("@/components/app/welcome/index.vue"),
   },
   mounted() {
     this.$store.state.App.bgTranstition = this.$refs.transition;
