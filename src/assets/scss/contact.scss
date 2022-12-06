@@ -10,7 +10,7 @@
 
     .deks {
       font-size: 1rem;
-      color: var(--bfont-color);
+      color: var(--secondary-color);
     }
 
     form {
@@ -33,7 +33,7 @@
         padding: 0.7vw;
         border: none;
         outline: none;
-        background: var(--bfont-color);
+        background: var(--secondary-color);
         margin-bottom: 0.5rem;
         color: #8d8d8d;
 
@@ -43,7 +43,7 @@
         &:valid,
         &:active {
           border: none;
-          background: var(--bfont-color);
+          background: var(--secondary-color);
         }
       }
 
@@ -54,14 +54,14 @@
         margin-top: 1rem;
 
         .btn-message {
-          background-color: var(--bfont-color);
+          background-color: var(--secondary-color);
           cursor: pointer;
           display: flex;
           justify-content: center;
           align-items: center;
           width: 15%;
           padding: 0.3rem 0.5rem;
-          fill: var(--wfont-color);
+          fill: var(--main-color);
           border-radius: 5px;
         }
 
@@ -72,8 +72,8 @@
 
           // .icon {
           //   padding: 0.5rem;
-          //   background: var(--bfont-color);
-          //   fill: var(--wfont-color);
+          //   background: var(--secondary-color);
+          //   fill: var(--main-color);
           //   border-radius: 50%;
           // }
         }
@@ -128,10 +128,10 @@
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid var(--nav-color);
+  border: 8px solid var(--secondary-color);
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: var(--nav-color) transparent transparent transparent;
+  border-color: var(--secondary-color) transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
@@ -175,7 +175,7 @@
 .message-status button {
   margin-top: 1rem;
   padding: 0.5rem 2rem;
-  background-color: var(--nav-color);
+  background-color: var(--secondary-color);
   outline: none;
   color: var(--main-color);
   border: none;

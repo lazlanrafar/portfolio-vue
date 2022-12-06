@@ -17,14 +17,14 @@
       list-style: none;
 
       li {
-        border-bottom: 1px solid var(--bfont-color);
+        border-bottom: 1px solid var(--secondary-color);
         position: relative;
         z-index: 10;
 
         a {
           display: block;
           padding: 4rem 0 2rem 0;
-          color: var(--bfont-color);
+          color: var(--secondary-color);
           z-index: 10;
           text-decoration: none;
 
@@ -40,7 +40,7 @@
           }
 
           .content {
-            color: var(--bfont-color);
+            color: var(--secondary-color);
             padding: 0 2rem;
             position: relative;
             mix-blend-mode: multiply;

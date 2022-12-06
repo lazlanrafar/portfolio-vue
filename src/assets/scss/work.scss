@@ -20,7 +20,7 @@
 
       .information {
         width: 40%;
-        color: var(--bfont-color);
+        color: var(--secondary-color);
 
         .work-title {
           font-size: 2vw;
@@ -56,9 +56,9 @@
           margin-top: 2rem;
 
           a {
-            background-color: var(--bfont-color);
+            background-color: var(--secondary-color);
             padding: 0.5rem 1rem;
-            color: var(--wfont-color);
+            color: var(--main-color);
             text-decoration: none;
             border-radius: 5px;
             opacity: 0.9;
