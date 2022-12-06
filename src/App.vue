@@ -24,10 +24,8 @@
 </template>
 
 <script>
-import TransitionMixin from "@/mixins/transition";
 export default {
   name: "App",
-  mixins: [TransitionMixin],
   components: {
     sidebar: () => import("@/components/app/sidebar/index.vue"),
     symbols: () => import("@/components/app/symbols/index.vue"),
