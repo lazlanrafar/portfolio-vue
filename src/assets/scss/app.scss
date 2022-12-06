@@ -77,10 +77,6 @@
     padding: 0 4rem !important;
     height: calc(100vh - var(--nav-md));
   }
-
-  .symbols {
-    left: 1.5rem !important;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -90,13 +86,5 @@
     .content-body {
       padding: 0.5rem 0;
     }
-  }
-
-  .code {
-    font-size: 0.7rem !important;
-  }
-
-  .symbols {
-    left: 1rem !important;
   }
 }
