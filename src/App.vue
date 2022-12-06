@@ -16,10 +16,7 @@
       <symbols position="bottom" />
     </div>
 
-    <div class="trans-back" ref="transition">
-      <img src="@/assets/images/loading.gif" alt="Image GIF" width="100" />
-      <p>Let me think &#129300; ...</p>
-    </div>
+    <transitions />
   </div>
 </template>
 
@@ -30,9 +27,7 @@ export default {
     sidebar: () => import("@/components/app/sidebar/index.vue"),
     symbols: () => import("@/components/app/symbols/index.vue"),
     welcome: () => import("@/components/app/welcome/index.vue"),
-  },
-  mounted() {
-    this.$store.state.App.bgTranstition = this.$refs.transition;
+    transitions: () => import("@/components/app/transitions/index.vue"),
   },
 };
 </script>
