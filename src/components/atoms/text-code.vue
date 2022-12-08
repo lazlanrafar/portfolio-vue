@@ -36,4 +36,10 @@ export default {
     content: ">";
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .code {
+    font-size: 0.7rem !important;
+  }
+}
 </style>

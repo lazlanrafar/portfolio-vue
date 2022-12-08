@@ -41,4 +41,16 @@ export default {
     position: absolute;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .symbols {
+    left: 1.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .symbols {
+    left: 1rem !important;
+  }
+}
 </style>
