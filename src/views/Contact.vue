@@ -63,9 +63,7 @@
               </a>
             </li>
           </ul>
-          <button type="submit" class="btn-message">
-            <box-icon name="paper-plane"></box-icon>
-          </button>
+          <button type="submit" class="btn-message">Send</button>
         </div>
       </form>
       <textCode text="form" isClose />

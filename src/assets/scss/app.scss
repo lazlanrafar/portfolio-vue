@@ -16,6 +16,7 @@ body {
   --background-color: #fafafa;
   --main-color: #fafafa;
   --secondary-color: #272727;
+  --red-color: #fd475a;
 
   --nav-size-lg: 4vw;
   --nav-size-md: 11vh;
@@ -36,7 +37,7 @@ body {
   overflow-y: auto;
 
   .content-body {
-    height: 100%;
+    height: auto;
     padding: 0 2rem;
   }
 }
@@ -56,7 +57,7 @@ body {
 @media only screen and (max-width: 600px) {
   .content {
     .content-body {
-      padding: 0 1rem !important;
+      padding: 0 1rem 0 2.7rem !important;
     }
   }
 }

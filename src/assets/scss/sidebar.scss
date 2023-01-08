@@ -151,6 +151,7 @@ a:hover:after {
 @media only screen and (max-width: 1024px) {
   nav {
     width: 100vw;
+    max-width: 100vw;
     height: var(--nav-size-md);
     flex-direction: row !important;
     padding: 0 2rem;
@@ -164,11 +165,11 @@ a:hover:after {
 
     .active {
       a {
-        color: var(--main-color) !important;
+        content: attr(data-content) !important;
       }
 
       .icon {
-        fill: var(--main-color) !important;
+        opacity: 0 !important;
       }
     }
   }
