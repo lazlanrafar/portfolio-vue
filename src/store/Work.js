@@ -33,7 +33,8 @@ const Work = {
         title: "Jurnal Ilmu Administrasi Public - UNISRI",
         description:
           "This is my first project to make UI together with the team using figma, this is a website that contains personal scientific journals from UNISRI university",
-        link: "https://www.figma.com/file/PkrvcVMMNDPHSZbdcHYj4Q/JIAP---Universitas-Slamet-Riyadi?node-id=0%3A1",
+        // link: "https://www.figma.com/file/PkrvcVMMNDPHSZbdcHYj4Q/JIAP---Universitas-Slamet-Riyadi?node-id=0%3A1",
+        link: "",
         codeTools: ["Figma"],
         design: "Design by Me & @alzdesco",
         img: "jiap.webp",

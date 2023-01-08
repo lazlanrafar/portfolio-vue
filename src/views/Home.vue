@@ -1,13 +1,14 @@
 <template>
-  <div class="content-body" id="home">
+  <div id="home">
     <div>
       <textCode text="h1" />
       <textHeader text="Hi," home="true" />
       <textHeader text="I'm Latoe," home="true" />
-      <textHeader text="Web Developer" close="true" home="true" />
+      <textHeader text="web developer" close="true" home="true" />
       <textCode text="p" />
       <p class="desc">Front-End & Back-End Developer 🎉</p>
       <textCode text="p" isClose />
+      <br />
       <br />
       <div @click="navTransition(1)">
         <router-link to="/about" class="btn">About me!</router-link>

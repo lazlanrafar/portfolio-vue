@@ -29,7 +29,6 @@ export default {
 <style lang="scss" scoped>
 .symbols {
   position: absolute;
-  left: calc(var(--nav-lg) + 2rem);
 
   .top {
     top: 1rem;

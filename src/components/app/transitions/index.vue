@@ -13,3 +13,31 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.trans-back {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-color);
+  z-index: 99;
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  transform: translateX(100%);
+  transition: transform 800ms ease;
+
+  p {
+    margin: 0.5rem 0;
+  }
+}
+.trans-back.show {
+  transform: translateX(0);
+}
+</style>

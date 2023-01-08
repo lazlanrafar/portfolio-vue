@@ -17,11 +17,11 @@
         @click="navTransition(index)"
       >
         <router-link :to="navItem.link" :data-content="navItem.content">
-          <box-icon
-            :name="navItem.icon"
-            style="fill: currentColor"
+          <img
+            :src="require(`@/assets/icons/navbar/${navItem.icon}`)"
             class="icon"
-          ></box-icon>
+            alt="icon"
+          />
         </router-link>
       </div>
     </div>
@@ -41,31 +41,31 @@ export default {
           name: "Home",
           link: "/",
           content: "Home",
-          icon: "home-alt",
+          icon: "ic-home.svg",
         },
         {
           name: "About",
           link: "/about",
           content: "About",
-          icon: "user",
+          icon: "ic-about.svg",
         },
         {
           name: "Work",
           link: "/work",
           content: "Work",
-          icon: "bowl-rice",
+          icon: "ic-work.svg",
         },
         {
           name: "Project",
           link: "/project",
           content: "Project",
-          icon: "coffee",
+          icon: "ic-project.svg",
         },
         {
           name: "Contact",
           link: "/contact",
           content: "Contact",
-          icon: "phone",
+          icon: "ic-contact.svg",
         },
       ],
     };

@@ -9,7 +9,7 @@
 
       <transition name="fade" mode="out-in" class="route">
         <keep-alive>
-          <router-view />
+          <router-view class="content-body" />
         </keep-alive>
       </transition>
 
@@ -34,4 +34,17 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/app.scss";
+
+.fade-enter {
+  opacity: 1 !important;
+}
+
+.fade-enter-active {
+  opacity: 0.3 !important;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: all 600ms;
+}
 </style>

@@ -1,6 +1,7 @@
 #home {
   display: flex;
   align-items: center;
+  height: 100%;
 
   .desc {
     font-size: 1.1vw;
@@ -9,37 +10,21 @@
 
   .btn {
     text-decoration: none;
-    color: var(--secondary-color);
-    padding: 0.5rem 2rem;
-    border: 2px solid var(--secondary-color);
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 1vw;
     font-family: "Poppins", sans-serif;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: all 0.8s;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: var(--secondary-color);
-      transition: all 0.8s;
-      z-index: -2;
-    }
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--main-color);
+    padding: 0.7em 2em;
+    transition: 0.2s;
 
     &:hover {
-      color: var(--main-color);
+      transform: translate(-0.25rem, -0.25rem);
+      box-shadow: 0.25rem 0.25rem var(--red-color);
+    }
 
-      &::before {
-        width: 100%;
-      }
+    &:active {
+      transform: translate(0);
+      box-shadow: none;
     }
   }
 }
