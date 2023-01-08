@@ -4,7 +4,7 @@
       <textCode text="h1" />
       <textHeader text="Hi," home="true" />
       <textHeader text="I'm Latoe," home="true" />
-      <textHeader text="Web Developer" close="true" home="true" />
+      <textHeader text="web developer" close="true" home="true" />
       <textCode text="p" />
       <p class="desc">Front-End & Back-End Developer 🎉</p>
       <textCode text="p" isClose />

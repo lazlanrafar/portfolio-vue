@@ -44,6 +44,10 @@ export default {
 .wrapper {
   display: flex;
   align-items: flex-end;
+
+  h1 {
+    line-height: 1em;
+  }
 }
 .head-home {
   font-size: 5vw;
