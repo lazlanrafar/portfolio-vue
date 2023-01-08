@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <welcome />
+    <!-- <welcome /> -->
 
     <sidebar />
 
@@ -9,14 +9,16 @@
 
       <transition name="fade" mode="out-in" class="route">
         <keep-alive>
-          <router-view />
+          <div class="content-body">
+            <router-view />
+          </div>
         </keep-alive>
       </transition>
 
       <symbols position="bottom" />
     </div>
 
-    <transitions />
+    <!-- <transitions /> -->
   </div>
 </template>
 
@@ -26,8 +28,8 @@ export default {
   components: {
     sidebar: () => import("@/components/app/sidebar/index.vue"),
     symbols: () => import("@/components/app/symbols/index.vue"),
-    welcome: () => import("@/components/app/welcome/index.vue"),
-    transitions: () => import("@/components/app/transitions/index.vue"),
+    // welcome: () => import("@/components/app/welcome/index.vue"),
+    // transitions: () => import("@/components/app/transitions/index.vue"),
   },
 };
 </script>

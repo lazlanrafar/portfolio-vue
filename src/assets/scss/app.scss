@@ -8,28 +8,37 @@
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 :root {
+  --background-color: #fafafa;
   --main-color: #fafafa;
   --secondary-color: #272727;
-  --nav-lg: 4vw;
-  --nav-md: 13vh;
+
+  --nav-size-lg: 4vw;
+  --nav-size-md: 11vh;
+
+  --index-nav: 100;
 }
 
 #app {
-  background-color: var(--main-color);
+  background-color: var(--background-color);
 }
 
 .content {
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
   position: relative;
-  background-color: var(--main-color);
-  padding: 0 0 0 calc(var(--nav-lg) + 4rem);
+  background-color: var(--background-color);
+  margin-left: var(--nav-size-lg);
+  height: 100vh;
+  max-width: 1080px;
+  padding: 0 2rem;
+  overflow-y: auto;
 
   .content-body {
-    padding: 5rem 0;
     height: 100%;
+    padding: 0 1.5rem;
   }
 }
 
@@ -46,45 +55,22 @@
   transition: all 600ms;
 }
 
-.trans-back {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--main-color);
-  z-index: 99;
-  color: var(--secondary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Poppins", sans-serif;
-  transform: translateX(100%);
-  transition: transform 800ms ease;
-
-  p {
-    margin: 0.5rem 0;
-  }
-}
-.trans-back.show {
-  transform: translateX(0);
-}
-
 @media only screen and (max-width: 1024px) {
   .content {
-    padding: 0 4rem !important;
-    height: calc(100vh - var(--nav-md));
+    margin-left: 0 !important;
+    padding: 0 !important;
+    height: calc(100vh - var(--nav-size-md)) !important;
+
+    .content-body {
+      padding: 0 2rem !important;
+    }
   }
 }
 
 @media only screen and (max-width: 600px) {
   .content {
-    padding: 0 2rem !important;
-
     .content-body {
-      padding: 0.5rem 0;
+      padding: 0 1rem !important;
     }
   }
 }
