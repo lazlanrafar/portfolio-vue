@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <welcome />
+    <!-- <welcome /> -->
 
     <sidebar />
 
@@ -26,7 +26,7 @@ export default {
   components: {
     sidebar: () => import("@/components/app/sidebar/index.vue"),
     symbols: () => import("@/components/app/symbols/index.vue"),
-    welcome: () => import("@/components/app/welcome/index.vue"),
+    // welcome: () => import("@/components/app/welcome/index.vue"),
     transitions: () => import("@/components/app/transitions/index.vue"),
   },
 };
