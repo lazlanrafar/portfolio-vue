@@ -32,27 +32,13 @@ body {
   background-color: var(--background-color);
   margin-left: var(--nav-size-lg);
   height: 100vh;
-  max-width: 1080px;
   padding: 0 2rem;
   overflow-y: auto;
 
   .content-body {
     height: 100%;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
-}
-
-.fade-enter {
-  opacity: 1;
-}
-
-.fade-enter-active {
-  opacity: 0.3;
-}
-
-.fade-leave-active {
-  opacity: 0;
-  transition: all 600ms;
 }
 
 @media only screen and (max-width: 1024px) {

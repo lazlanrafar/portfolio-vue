@@ -1,6 +1,7 @@
 nav {
   height: 100vh;
   width: var(--nav-size-lg);
+  max-width: 80px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -46,6 +47,11 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .icon {
+          filter: invert(99%) sepia(41%) saturate(153%) hue-rotate(287deg)
+            brightness(113%) contrast(96%);
+        }
       }
 
       &:hover {
@@ -66,7 +72,8 @@ nav {
       }
 
       .icon {
-        fill: var(--secondary-color);
+        filter: invert(11%) sepia(6%) saturate(0%) hue-rotate(160deg)
+          brightness(104%) contrast(91%) !important;
       }
     }
   }

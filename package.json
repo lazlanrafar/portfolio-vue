@@ -10,7 +10,6 @@
   "dependencies": {
     "@vercel/analytics": "^0.1.5",
     "axios": "^0.27.2",
-    "boxicons": "^2.1.1",
     "core-js": "^3.6.5",
     "TagCloud": "^2.2.0",
     "vue": "^2.6.11",

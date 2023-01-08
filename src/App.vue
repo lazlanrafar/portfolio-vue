@@ -9,16 +9,14 @@
 
       <transition name="fade" mode="out-in" class="route">
         <keep-alive>
-          <div class="content-body">
-            <router-view />
-          </div>
+          <router-view />
         </keep-alive>
       </transition>
 
       <symbols position="bottom" />
     </div>
 
-    <!-- <transitions /> -->
+    <transitions />
   </div>
 </template>
 
@@ -29,11 +27,24 @@ export default {
     sidebar: () => import("@/components/app/sidebar/index.vue"),
     symbols: () => import("@/components/app/symbols/index.vue"),
     // welcome: () => import("@/components/app/welcome/index.vue"),
-    // transitions: () => import("@/components/app/transitions/index.vue"),
+    transitions: () => import("@/components/app/transitions/index.vue"),
   },
 };
 </script>
 
 <style lang="scss">
 @import "@/assets/scss/app.scss";
+
+.fade-enter {
+  opacity: 1 !important;
+}
+
+.fade-enter-active {
+  opacity: 0.3 !important;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: all 600ms;
+}
 </style>
