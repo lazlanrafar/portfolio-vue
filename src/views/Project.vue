@@ -1,50 +1,33 @@
 <template>
-  <div class="project-page">
+  <div id="page-project">
     <div class="title-page">
       <textCode text="h1" />
       <header-text text="My Project" close="true"></header-text>
     </div>
 
-    <div class="project-list">
-      <ul>
-        <!-- ITEM 01 -->
-        <li
-          v-for="(project, index) in projects"
-          :key="index"
-          class="project-item"
-        >
-          <a
-            :href="project.link"
-            target="_blank"
-            @mousemove="mouseMove($event, index)"
-            @mouseleave="mouseLeave(index)"
-          >
-            <div class="content">
-              <p class="no">0{{ index + 1 }}/</p>
-              <div class="text">
-                <p class="title">{{ project.title }}</p>
-                <!-- <p class="design">Design by : {{ project.designer }}</p> -->
-                <p
-                  style="display: inline-block"
-                  class="category"
-                  v-for="(item, index) in project.category"
-                  :key="index"
-                >
-                  {{ item }}, &nbsp;
-                </p>
-              </div>
+    <div class="row">
+      <article v-for="(item, index) in reports" :key="index" class="column">
+        <a :href="item.link" target="_blank">
+          <div class="card">
+            <img
+              :src="require(`@/assets/images/projects/${item.image}`)"
+              class="project-img"
+              alt=""
+            />
+
+            <div class="action">
+              <a target="_blank" :href="item.sourceCode"> Source Code </a>
+              <a target="_blank" :href="item.link"> Visit </a>
             </div>
-            <div class="hover-reveal">
-              <img
-                class="hidden-img"
-                width="100%"
-                :src="require(`@/assets/images/projects/${project.image}`)"
-                alt=""
-              />
-            </div>
-          </a>
-        </li>
-      </ul>
+
+            <img
+              src="https://i.imgur.com/wxn8iAD.png"
+              alt="anya"
+              class="anya"
+            />
+          </div>
+        </a>
+      </article>
     </div>
   </div>
 </template>
@@ -63,42 +46,6 @@ export default {
     reports() {
       return this.$store.state.Project.reports;
     },
-    // category() {
-    //   return this.$store.state.Project.category;
-    // },
-  },
-  methods: {
-    mouseMove(event, index) {
-      let linkHoverReveal = document.querySelectorAll(".hover-reveal");
-      let linkImages = document.querySelectorAll(".hidden-img");
-
-      linkHoverReveal[index].style.opacity = 1;
-      linkHoverReveal[
-        index
-      ].style.transform = `translate(-170%, -50% ) rotate(5deg)`;
-      linkImages[index].style.transform = "scale(1, 1)";
-      linkHoverReveal[index].style.left = event.clientX * 1.5 + "px";
-    },
-    mouseLeave(index) {
-      let linkHoverReveal = document.querySelectorAll(".hover-reveal");
-      let linkImages = document.querySelectorAll(".hidden-img");
-
-      linkHoverReveal[index].style.opacity = 0;
-      linkHoverReveal[
-        index
-      ].style.transform = `translate(-50%, -50%) rotate(-5deg)`;
-      linkImages[index].style.transform = "scale(0.8, 0.8)";
-    },
-  },
-  created() {
-    this.projects = this.reports;
-    for (const iterator of this.reports) {
-      for (const item of iterator.category) {
-        if (this.category.indexOf(item) === -1) {
-          this.category.push(item);
-        }
-      }
-    }
   },
 };
 </script>

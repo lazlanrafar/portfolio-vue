@@ -1,4 +1,4 @@
-.project-page {
+#page-project {
   font-family: poppins;
 
   .title-page {
@@ -8,90 +8,93 @@
     margin: 3rem 0;
   }
 
-  .project-list {
+  .row {
     margin-bottom: 7rem;
+    display: flex;
+    flex-wrap: wrap;
 
-    ul {
-      min-height: 50vh;
-      width: 100%;
-      list-style: none;
+    .column {
+      flex: 25%;
+      max-width: 25%;
 
-      li {
-        border-bottom: 1px solid var(--secondary-color);
+      .card {
         position: relative;
-        z-index: 10;
+        margin: 1rem;
+        height: 250px;
+        border: 3px solid var(--secondary-color);
+        box-shadow: 5px 5px 0 var(--secondary-color);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
-        a {
-          display: block;
-          padding: 4rem 0 2rem 0;
-          color: var(--secondary-color);
-          z-index: 10;
-          text-decoration: none;
+        .action {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
 
-          span {
-            display: block;
-            font-weight: 500;
-            z-index: 10;
-            mix-blend-mode: multiply;
-            display: inline-block;
-            position: relative;
-            font-size: 3rem;
-            text-transform: uppercase;
+          a {
+            background-color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            color: var(--main-color);
+            text-decoration: none;
+            border-radius: 5px;
+
+            &:hover {
+              font-weight: 500;
+            }
           }
+        }
 
-          .content {
-            color: var(--secondary-color);
-            padding: 0 2rem;
-            position: relative;
-            mix-blend-mode: multiply;
-            z-index: 10;
-            width: 100%;
-            height: 100%;
+        .anya {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 70px;
+          height: auto;
+          display: none;
+        }
+
+        &:hover {
+          .action {
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
-            align-items: center;
-
-            .no {
-              font-size: 2.2rem;
-              font-weight: 600;
-              margin-right: 15%;
-              width: 200px;
-            }
-
-            .text {
-              .title {
-                font-size: 1.7rem;
-                font-weight: 500;
-              }
-
-              .category {
-                font-size: 1.1rem;
-                font-weight: 400;
-                margin-top: 0.5rem;
-              }
-            }
           }
-
-          .hover-reveal {
-            position: absolute;
-            width: 20vw;
-            height: 12vw;
-            top: 50%;
-            left: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            overflow: hidden;
-            opacity: 0;
-            transform: scale(0.8);
-            transition: all 0.5s ease-out;
-
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              position: relative;
-              transition: transform 0.4s ease-out;
-            }
+          .anya {
+            display: block;
           }
+        }
+      }
+
+      .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .row {
+    .column {
+      .card {
+        height: 150px !important;
+
+        .action {
+          a {
+            padding: 0.3rem 0.5rem !important;
+            font-size: 0.5em;
+          }
+        }
+
+        .anya {
+          width: 50px !important;
         }
       }
     }
@@ -107,21 +110,15 @@
     }
   }
 
-  .project-item {
-    height: 17vw !important;
+  .row {
+    margin-bottom: 5rem !important;
 
-    .content {
-      .no {
-        font-size: 2rem !important;
-        width: auto !important;
-      }
-      .text {
-        .title {
-          font-size: 1.2rem !important;
-        }
-        .design {
-          font-size: 0.8rem !important;
-        }
+    .column {
+      flex: 33% !important;
+      max-width: 33% !important;
+
+      .card {
+        height: 120px !important;
       }
     }
   }
@@ -132,21 +129,14 @@
     margin-top: 5rem !important;
     margin-bottom: 1rem !important;
   }
-  .project-item {
-    height: 35vw !important;
+  .row {
+    margin-bottom: 4rem !important;
+    .column {
+      flex: 100% !important;
+      max-width: 100% !important;
 
-    .content {
-      padding: 0 !important;
-      .no {
-        font-size: 1.5rem !important;
-      }
-      .text {
-        .title {
-          font-size: 0.8rem !important;
-        }
-        .category {
-          font-size: 0.7rem !important;
-        }
+      .card {
+        height: 200px !important;
       }
     }
   }
