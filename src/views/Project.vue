@@ -14,6 +14,17 @@
               class="project-img"
               alt=""
             />
+
+            <div class="action">
+              <a target="_blank" :href="item.sourceCode"> Source Code </a>
+              <a target="_blank" :href="item.link"> Visit </a>
+            </div>
+
+            <img
+              src="https://i.imgur.com/wxn8iAD.png"
+              alt="anya"
+              class="anya"
+            />
           </div>
         </a>
       </article>
