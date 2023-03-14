@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 .code {
   font-size: 1rem;
-  font-family: "La Belle Aurore", cursive;
+  font-family: "La Belle Aurore", cursive !important;
   position: relative;
   user-select: none;
   color: var(--muted-color);

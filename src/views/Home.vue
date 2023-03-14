@@ -9,10 +9,7 @@
       <p class="desc">Front-End & Back-End Developer 🎉</p>
       <textCode text="p" isClose />
       <br />
-      <br />
-      <div @click="navTransition(1)">
-        <router-link to="/about" class="btn">About me!</router-link>
-      </div>
+      <buttonPrimary text="About me!" :onClick="handleAbout" />
     </div>
   </div>
 </template>
@@ -26,6 +23,14 @@ export default {
   components: {
     textHeader: () => import("@/components/atoms/text-header.vue"),
     textCode: () => import("@/components/atoms/text-code.vue"),
+    buttonPrimary: () => import("@/components/atoms/button-primary.vue"),
+  },
+  methods: {
+    handleAbout() {
+      this.$router.push("/about");
+
+      this.navTransition(1);
+    },
   },
 };
 </script>

@@ -1,20 +1,16 @@
 <template>
   <div class="content-body" id="about">
-    <div class="text">
+    <div class="left">
       <textCode text="h1" />
-      <textHeader
-        text="Me,Myself & I"
-        class="title"
-        open="true"
-        close="true"
-      ></textHeader>
-      <div class="deks">
+      <textHeader text="Me,Myself & I" open="true" close="true"></textHeader>
+      <div class="desc">
         <textCode text="p" />
-        <p style="margin-bottom: 1rem">
+        <p>
           Hii I'm a Full Stack Web Developer based in Indonesia. I describe
           myself as a passionate developer who loves coding, open source, and
           the web platform.
         </p>
+        <br />
         <p>
           Aside from my job, I like to create and contribute to open source
           projects. That helps me to learn a ton of new stuff, grow as a

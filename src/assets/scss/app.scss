@@ -10,6 +10,7 @@
 
 body {
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -57,7 +58,7 @@ body {
 @media only screen and (max-width: 600px) {
   .content {
     .content-body {
-      padding: 0 1rem 0 2.7rem !important;
+      padding: 0 1rem 0 2rem !important;
     }
   }
 }
