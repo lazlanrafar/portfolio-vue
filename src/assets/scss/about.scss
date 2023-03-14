@@ -4,18 +4,12 @@
   justify-content: space-between;
   height: 100%;
 
-  .text {
+  .left {
     margin-left: 40px;
-    font-size: 1.3vw;
-    color: var(--font-color);
-    font-family: "Poppins", sans-serif;
-    width: 25em;
+    width: 40%;
 
-    .title {
-      color: var(--red-color);
-    }
-
-    .deks {
+    .desc {
+      color: var(--font-color);
       font-size: 1vw;
     }
   }
@@ -24,44 +18,45 @@
     margin: 0 auto;
     font-weight: 600;
     color: var(--font-color);
-    font-family: "Poppins", sans-serif;
     user-select: none;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 900px) {
   #about {
     display: block;
     margin-top: 6em;
-    .text {
-      width: 90vw;
+    padding-bottom: 730px !important;
+
+    .left {
+      width: 90%;
       margin-left: 0 !important;
+
+      .desc {
+        font-size: 1.2rem !important;
+      }
     }
+
     .global {
       display: block;
     }
-  }
-
-  .deks {
-    font-size: 2.7vw !important;
   }
 }
 
 @media only screen and (max-width: 600px) {
   #about {
-    padding-bottom: 750px !important;
-    .text {
-      width: 80vw;
-      margin-left: 2em !important;
+    .left {
+      width: 98%;
 
-      .deks {
-        font-size: 4vw !important;
+      .desc {
+        font-size: 0.9rem !important;
       }
     }
+
     .global {
       position: relative;
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 0.8rem !important;
     }
   }
 }

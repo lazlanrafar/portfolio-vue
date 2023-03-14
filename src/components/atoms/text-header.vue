@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1 :class="{ 'head-home': home, 'head-common': !home }">
+    <h2 :class="{ 'head-home': home, 'head-default': !home }">
       <span
         v-for="(letter, index) in text"
         :key="index"
@@ -14,7 +14,7 @@
           {{ letter }}
         </span>
       </span>
-    </h1>
+    </h2>
     <textCode text="h1" isClose style="margin-left: 1rem" v-if="close" />
   </div>
 </template>
@@ -43,32 +43,30 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
+  overflow: hidden;
 
-  h1 {
-    line-height: 1em;
+  h2 {
+    font-family: "coolvetica" !important;
+    color: var(--secondary-color);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: text;
+    .letter {
+      display: inline-block;
+    }
+    .space {
+      padding: 5px;
+    }
   }
-}
-.head-home {
-  font-size: 5vw;
-  letter-spacing: 4px;
-}
-.head-common {
-  font-size: 4vw;
-  letter-spacing: 2px;
-}
-h1 {
-  font-family: coolvetica;
-  color: var(--secondary-color);
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  cursor: text;
-  .letter {
-    display: inline-block;
+  .head-home {
+    font-size: 6.3rem;
+    line-height: 6rem;
   }
-  .space {
-    padding: 5px;
+  .head-default {
+    font-size: 5rem;
   }
 }
 
@@ -76,20 +74,33 @@ h1 {
   animation: rubberband 800ms alternate ease-out;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1800px) {
   .head-home {
-    font-size: 10vw;
+    font-size: 5rem !important;
+    line-height: 5rem !important;
   }
-  .head-common {
-    font-size: 9vw;
+  .head-default {
+    font-size: 3.9rem !important;
+    line-height: normal !important;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .head-home {
+    font-size: 5rem !important;
+    line-height: 5rem !important;
+  }
+  .head-default {
+    font-size: 4.5rem !important;
+    line-height: normal !important;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .head-home,
-  .head-common {
-    font-size: 11vw;
-    letter-spacing: 1px;
-    line-height: normal;
+  .head-default {
+    font-size: 3.3rem !important;
+    line-height: 3rem !important;
   }
 }
 </style>

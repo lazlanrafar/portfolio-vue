@@ -4,45 +4,14 @@
   height: 100%;
 
   .desc {
-    font-size: 1.1vw;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .btn {
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    background: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    color: var(--main-color);
-    padding: 0.7em 2em;
-    transition: 0.2s;
-
-    &:hover {
-      transform: translate(-0.25rem, -0.25rem);
-      box-shadow: 0.25rem 0.25rem var(--red-color);
-    }
-
-    &:active {
-      transform: translate(0);
-      box-shadow: none;
-    }
+    font-size: 1.2rem;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   #home {
     .desc {
-      font-size: 2.4vw;
-    }
-  }
-}
-@media only screen and (max-width: 600px) {
-  #home {
-    .btn {
-      border: 1px solid var(--secondary-color);
-      padding: 0.5rem 1.5rem;
-      font-size: 0.7rem;
-      font-weight: 500;
+      font-size: 1rem;
     }
   }
 }

@@ -13,7 +13,7 @@ export default {
     let radius = 350;
 
     if (x.matches) {
-      radius = 170;
+      radius = 200;
     }
 
     const texts = [
