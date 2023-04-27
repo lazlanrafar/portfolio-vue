@@ -3,6 +3,15 @@ const Work = {
     loadingWork: false,
     reports: [
       {
+        title: "IT Inventory - Inventory Management System",
+        description:
+          "IT Inventory is an application to manage IT assets in the Riau Islands without having to queue.",
+        link: "",
+        codeTools: ["Vue.js", "Node.js", "Express.js", "PostgreSQL"],
+        design: "Design by Me",
+        img: "it-inventory-camak.webp",
+      },
+      {
         title: "Silaju - Motor Vehicle Sales Report System",
         description:
           "Information System for Sales of Motorized Vehicles in batam city",
